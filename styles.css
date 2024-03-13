@@ -1,0 +1,120 @@
+body,html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+input[type=text],input[type=password],input[type=email]{
+  background-color: rgba(255, 255, 255, 0.216);
+  border: none;
+  padding-left: 11%;
+  color: white;
+}
+input[type=text]::placeholder,input[type=password]::placeholder,input[type=email]::placeholder{
+  color: rgba(255, 255, 255, 0.551);
+}
+input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,input[type=text]::selection,input[type=password]::selection,input[type=email]::selection{
+  outline:solid 2px white;
+  color: white;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.216);
+}
+.icon{
+  position: relative;
+}
+.icon img{
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 17px;
+  width: 17px;
+  z-index: 1; /* Ensure the icon appears above the input */
+}
+.icon .eye{
+  position: absolute;
+  left: 90%;
+  top: 50%; 
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.login{
+  width:100px;
+}
+button:hover{
+  background-color: rgba(255, 255, 255, 0.467) !important;
+  color: white !important;
+}
+button{
+  border-radius: 20px !important;
+  font-weight:bold !important;
+  width:120px !important;
+}
+#check,#checkb{
+  accent-color: white;
+}
+/* FLIP CARD CSS STYLES */
+.main{
+position: absolute;
+ top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#myCard {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Remove this line */
+}
+
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inside {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.flip-card.flipped .flip-card-inside {
+  transform: rotateY(180deg);
+}
+
+.flip-card .login-card,
+.flip-card .signup-card {
+  background-color: rgba(255, 255, 255, 0.207); /* Semi-transparent white */
+  border-radius: 5px;
+  width: 100%; /* Take full width of parent */
+  max-width: 350px; /* Adjust max-width as needed */
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform-origin: center;
+  backface-visibility: hidden;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.flip-card .signup-card {
+  transform: rotateY(180deg);
+}
+
